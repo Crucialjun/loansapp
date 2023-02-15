@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:loansapp/features/router.dart';
+import 'package:loansapp/features/splash/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: const SplashScreen(),
     );
   }
 }
